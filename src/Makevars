@@ -1,0 +1,6 @@
+PKG_CPPFLAGS = -I.
+# No floating-point contraction anywhere (no fused multiply-add): draws do not
+# depend on whether the compiler fuses multiply-adds, and the optimised kernels
+# can replicate the reference evaluation order exactly.  The system math library
+# can still differ across platforms.
+PKG_CXXFLAGS = -ffp-contract=off

@@ -1,0 +1,7 @@
+^\.git$
+^\.gitignore$
+\.DS_Store$
+^.*\.tar\.gz$
+^\.Rproj\.user$
+^simulation$
+^LICENSE\.md$

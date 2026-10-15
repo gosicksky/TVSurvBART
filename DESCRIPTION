@@ -1,0 +1,28 @@
+Package: TVSurvBART
+Type: Package
+Title: Bayesian Nonparametric Survival Regression with Time-Varying Covariates and Random Effects
+Version: 0.0.3.1
+Date: 2026-10-14
+Authors@R: c(
+    person("Keming", "Zhang", email = "keming_zhang@brown.edu", role = c("aut", "cre")),
+    person("Yudan", "Zou", role = "aut"),
+    person("Fan", "Li", role = "aut"),
+    person("Liangyuan", "Hu", role = "aut"),
+    person("Robert", "McCulloch", role = c("ctb", "cph"), comment = "BART package code"),
+    person("Rodney", "Sparapani", role = c("ctb", "cph"), comment = "BART package code"))
+Description: Fits TVSurvBART, a continuous-time Bayesian survival model for
+    longitudinal data recorded in counting-process (start-stop) form. The
+    hazard combines a baseline hazard (natural cubic spline or piecewise
+    constant), a Bayesian additive regression tree ensemble of the
+    time-varying covariates, and subject-level random effects (a random
+    intercept, optionally with a random slope in time) with a Huang-Wand
+    covariance prior. Posterior inference is by Markov chain Monte Carlo; the
+    prediction functions return posterior draws of the cumulative hazard for
+    training and new subjects.
+License: GPL (>= 3)
+Depends: R (>= 4.1.0)
+URL: https://github.com/gosicksky/TVSurvBART
+BugReports: https://github.com/gosicksky/TVSurvBART/issues
+Encoding: UTF-8
+Imports: Rcpp (>= 1.1.0), dplyr, mvtnorm, nnet, stats, utils
+LinkingTo: Rcpp, RcppEigen, BH
