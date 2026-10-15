@@ -11,9 +11,13 @@ TVSurvBART is a continuous-time survival model for longitudinal data in counting
 ```r
 # install.packages("remotes")
 remotes::install_github("gosicksky/TVSurvBART")
+
+# or from the source package in this repository (download it first; dependencies are not installed automatically)
+install.packages(c("Rcpp", "RcppEigen", "BH", "dplyr", "mvtnorm", "nnet"))
+install.packages("TVSurvBART_0.0.3.1.tar.gz", repos = NULL, type = "source")
 ```
 
-You need R >= 4.1 and a C++ compiler. The dependencies (Rcpp, RcppEigen, BH, dplyr, mvtnorm, nnet) are installed automatically. The package has been built and tested on macOS (arm64). The same engine, under its earlier name CoxBARTserver 0.0.3.1, ran the paper's simulations on Linux. Each function has a help page (`?wbart`, `?pwbart`, `?pwbart_grid`, `?predict.wbart`, `?convert_start_stop`); the main arguments are summarised below.
+You need R >= 4.1 and a C++ compiler. With `install_github` the dependencies (Rcpp, RcppEigen, BH, dplyr, mvtnorm, nnet) are installed automatically. The package has been built and tested on macOS (arm64). The same engine, under its earlier name CoxBARTserver 0.0.3.1, ran the paper's simulations on Linux. Each function has a help page (`?wbart`, `?pwbart`, `?pwbart_grid`, `?predict.wbart`, `?convert_start_stop`); the main arguments are summarised below.
 
 ## Quick start
 
