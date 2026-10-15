@@ -4,5 +4,4 @@
 .DS_Store
 .Rproj.user
 .Rhistory
-*.tar.gz
 *.Rcheck/
