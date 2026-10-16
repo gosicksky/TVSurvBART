@@ -13,8 +13,6 @@
 
 ## Tree-proposal fix (CoxBARTserver 0.0.3.1, 2026-10-04)
 
-* `bprop()` (`src/bartfuns.cpp`) decided whether the parent of the chosen leaf is a nog node with `ntype() == 'n'`. `ntype()` returns `'t'` for the root, so in a two-leaf tree the root was not recognised as a nog. The reverse-move probability of a 2 -> 3 leaf birth was then 1/2 instead of 1, which halved that move's Metropolis-Hastings ratio. The test is now `isnog()`. The bug is inherited from CRAN BART. Draws differ from 0.0.3 for the same seed.
-
 # CoxBARTserver 0.0.3 (2026-09-30)
 
 * Consistent thinning: with `keepevery > 1`, every per-draw output (tree draws, baseline, random-effect and covariance draws, cumulative hazards) is stored at the same sweeps, so prediction pairs each tree draw with the parameters of the same sweep. `pwbart()` refuses fits whose draw counts do not pair. Fits with `keepevery = 1` are unchanged.
